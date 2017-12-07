@@ -14,9 +14,10 @@
 #include <PressButton.h>
 
 #define S20 true
+// #define DEBUG true
 
 #ifdef S20
-
+// compile with sonoff settings
 #define LED_PIN 13
 #define RELAY_PIN 12
 #define BUTTON_PIN 0
@@ -25,12 +26,12 @@
 #define BUTTON_IS_ACTIVE_LOW true
 
 #else
-
-#define LED_PIN 13
-#define RELAY_PIN BUILTIN_LED    // GPIO 2 / D4
-#define BUTTON_PIN = 14;       // GPIO14 / D5
-#define LED_IS_ACTIVE_LOW    1     // active ? on S20
-#define RELAY_IS_ACTIVE_LOW  true  // active ? on S20 
+// compile with wemos dev board settings
+#define LED_PIN 13  // D7
+#define RELAY_PIN BUILTIN_LED      // GPIO/PIN 2 / D4
+#define BUTTON_PIN 14              // D5
+#define LED_IS_ACTIVE_LOW  true
+#define RELAY_IS_ACTIVE_LOW  true
 #define BUTTON_IS_ACTIVE_LOW true
 
 #endif
